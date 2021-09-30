@@ -49,8 +49,7 @@ public class SparepartstypeController {
     @RolesAllowed("USER")
     @DeleteMapping("/delete/{id}")
     public String delete (@PathVariable int id){
-        baseresp<Sparepartstype> base=null;
-        base=baseresp.<Sparepartstype>builder().Data(sparepartstypeInterface.deletebyid(id)).build();
+        sparepartstypeInterface.deletebyid(id);
         return "Sucess";
     }
 }
