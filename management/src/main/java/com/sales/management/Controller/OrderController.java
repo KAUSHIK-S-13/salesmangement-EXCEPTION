@@ -46,8 +46,7 @@ public class OrderController {
     @RolesAllowed("USER")
     @DeleteMapping("/delete/{id}")
     public String delete (@PathVariable int id){
-        baseresp<Order> base=null;
-        base=baseresp.<Order>builder().Data(orderInterface.deletebyid(id)).build();
+       orderInterface.deletebyid(id);
         return "Sucess";
     }
 
